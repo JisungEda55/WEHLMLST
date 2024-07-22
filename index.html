@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeHolic MileStone</title>
+    <style>
+        @font-face {
+            font-family: 'LINESeedKR-Bd';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'LINESeedKR-Bd', sans-serif;
+            background-color: #f2f2f7;
+            margin: 0;
+            padding: 0;
+            color: #010101;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0;
+        }
+        h1 {
+            margin: 0 0 20px;
+            color: #010101;
+            font-size: 1.8em;
+        }
+        .timeline {
+            position: relative;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 20px;
+            width: 2px;
+            height: 100%;
+            background-color: #fc3c1c;
+        }
+        .milestone {
+            position: relative;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            padding-left: 50px;
+        }
+        .milestone:hover {
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        .milestone::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #fc3c1c;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+        }
+        .milestone h2 {
+            margin: 0 0 10px;
+            font-size: 1.2em;
+            color: #010101;
+        }
+        .milestone p {
+            margin: 0;
+            font-size: 1em;
+            color: #555;
+        }
+        .milestone-date {
+            font-size: 0.9em;
+            color: #888;
+            margin-bottom: 10px;
+        }
+        .milestone-content {
+            display: none;
+            padding-top: 10px;
+            border-top: 1px solid #ddd;
+        }
+        .milestone.active .milestone-content {
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5em;
+            }
+            .timeline::before {
+                left: 10px;
+            }
+            .milestone {
+                padding: 10px 15px;
+                padding-left: 40px;
+            }
+            .milestone::before {
+                left: 10px;
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.2em;
+            }
+            .timeline::before {
+                left: 5px;
+            }
+            .milestone {
+                padding: 8px 10px;
+                padding-left: 30px;
+            }
+            .milestone::before {
+                left: 5px;
+                width: 12px;
+                height: 12px;
+            }
+        }
+
+        footer {
+            background-color: #f2f2f7;
+            color: #fc3c1c;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+        }
+        footer img {
+            width: 40vw;
+            max-width: 500px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>WeHolic MileStone</h1>
+        <ul class="timeline">
+            <li class="milestone">
+                <h2>WeHolic FoodIng</h2>
+                <p class="milestone-date">Q1, 2026</p>
+                <div class="milestone-content">
+                    <p>WeHolic FoodIng.</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Move</h2>
+                <p class="milestone-date">Q1-Q2, 2026</p>
+                <div class="milestone-content">
+                    <p>WeHolic Move.</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Pay</h2>
+                <p class="milestone-date">Q3-Q4, 2026</p>
+                <div class="milestone-content">
+                    <p>WeHolic Pay.</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Global(Mongolia)</h2>
+                <p class="milestone-date">Q1, 2027</p>
+                <div class="milestone-content">
+                    <p>FoodIng, Move, Pay ==> WeHolic Mongolia</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Map, Navi</h2>
+                <p class="milestone-date">Q2, 2027</p>
+                <div class="milestone-content">
+                    <p>WeHolic Map, Navi.</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Global(Japan)</h2>
+                <p class="milestone-date">Q4, 2027</p>
+                <div class="milestone-content">
+                    <p>FoodIng, Move, Pay, Map(Navi) ==> WeHolic Japan VIA America</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Wallet With Bank</h2>
+                <p class="milestone-date">Q1, 2028</p>
+                <div class="milestone-content">
+                    <p>WeHolic Wallet With Bank.</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WeHolic Global(Europe)</h2>
+                <p class="milestone-date">Q3, 2028</p>
+                <div class="milestone-content">
+                    <p>FoodIng, Move, Pay, Map(Navi), Wallet ==> WeHolic Europe</p>
+                </div>
+            </li>
+            <li class="milestone">
+                <h2>WTT by WeHolic</h2>
+                <p class="milestone-date">Q4, 2028</p>
+                <div class="milestone-content">
+                    <p>Telecommunications Corp by WeHolic.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <footer>
+        <img src="https://private-user-images.githubusercontent.com/157635626/350888148-dd5c5f92-c81f-481f-a58f-83afcba344ef.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjE2MzkzNjEsIm5iZiI6MTcyMTYzOTA2MSwicGF0aCI6Ii8xNTc2MzU2MjYvMzUwODg4MTQ4LWRkNWM1ZjkyLWM4MWYtNDgxZi1hNThmLTgzYWZjYmEzNDRlZi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcyMlQwOTA0MjFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zODA5MjdmZWY2ZjlmMzAzMGFhYjliNzE2YzIyMWM5NDZiYjM0NzdkZTZkMzEzNWM3YjE1NzIzNmIzOTE4YjYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.RiFPrMiOYnrctFY-SsB1btXwtYuf7zORY1KbhCxrVk8" alt="WeHolic logo">
+    </footer>
+    <script>
+        document.querySelectorAll('.milestone').forEach(milestone => {
+            milestone.addEventListener('click', () => {
+                milestone.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
